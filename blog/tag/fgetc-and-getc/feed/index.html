@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Fgetc() And Getc() ?</title>
+	<atom:link href="https://www.skillvertex.com/tag/fgetc-and-getc/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 06 Mar 2024 11:36:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Fgetc() And Getc() ?</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>What Is The Return Type Of Getchar(), Fgetc() And Getc() ?</title>
+		<link>https://www.skillvertex.com/blog/what-is-the-return-type-of-getchar-fgetc-and-getc/</link>
+					<comments>https://www.skillvertex.com/blog/what-is-the-return-type-of-getchar-fgetc-and-getc/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2024 11:36:40 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Fgetc() And Getc() ?]]></category>
+		<category><![CDATA[What Is The Return Type Of Getchar()]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3597</guid>
+
+					<description><![CDATA[What Is The Return Type Of Getchar(), Fgetc() And Getc() ? In C, when you use getchar(), fgetc(), or getc(), what you get back is not a character but an integer. So, it&#8217;s a good idea to catch that integer by using an integer-type variable. These functions return the ASCII value of the character you ... <a title="What Is The Return Type Of Getchar(), Fgetc() And Getc() ?" class="read-more" href="https://www.skillvertex.com/blog/what-is-the-return-type-of-getchar-fgetc-and-getc/" aria-label="More on What Is The Return Type Of Getchar(), Fgetc() And Getc() ?">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-the-return-type-of-getchar-fgetc-and-getc">What Is The Return Type Of Getchar(), Fgetc() And Getc() ?</a></li><li ><a href="#faq-what-is-the-return-type-of-getchar-fgetc-and-getc">FAQ- What Is The Return Type Of Getchar(), Fgetc() And Getc() ?</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-return-type-of-getchar-fgetc-and-getc">What Is The Return Type Of Getchar(), Fgetc() And Getc() ?</h2>
+
+
+
+<p>In C, when you use <code>getchar()</code>, <code>fgetc()</code>, or <code>getc()</code>, what you get back is not a character but an integer. So, it&#8217;s a good idea to catch that integer by using an integer-type variable. These functions return the ASCII value of the character you input or read, and using an integer-type variable helps you handle and check for special cases like the end of the file.</p>
+
+
+
+<pre class="wp-block-code"><code>
+
+char ch;  /* May cause problems */  
+while ((ch = getchar()) != EOF)  
+{ 
+   putchar(ch); 
+} </code></pre>
+
+
+
+<p>This version uses integer to compare the value of getchar().</p>
+
+
+
+<pre class="wp-block-code"><code>int in;   
+while ((in = getchar()) != EOF)  
+{ 
+   putchar(in); 
+} </code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-what-is-the-return-type-of-getchar-fgetc-and-getc">FAQ- What Is The Return Type Of Getchar(), Fgetc() And Getc() ?</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1700220330978" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the return type of Getchar ()?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The getchar() function obtains a character from stdin. It returns the character that was read in the form of an integer or EOF if an error occurs</p>
+
+</div>
+</div>
+<div id="faq-question-1700220336240" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is getc () and Getchar () in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C, there are two ways to read characters: <code>getc()</code> and <code>getchar()</code>. The key difference is that <code>getc()</code> can read from anywhere, not just the usual input. But, if you&#8217;re just grabbing a character from the regular input, using <code>getchar()</code> is like taking a quick and easy route – it&#8217;s the same as saying <code>getc(stdin)</code>. So, if you&#8217;re sticking to the standard input, <code>getchar()</code> is the simpler choice.</p>
+
+</div>
+</div>
+<div id="faq-question-1700220342321" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the difference between fgetc and getc?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.<br />In C, there are two buddies, <code>fgetc()</code> and <code>getc()</code>, doing the same job of getting characters. But here&#8217;s the thing: <code>fgetc()</code> is a real subroutine, not just a fancy term like &#8220;macro&#8221; used for <code>getc()</code>. However, there&#8217;s a trade-off – <code>fgetc()</code> might be a bit slower than <code>getc()</code>, but it&#8217;s more efficient in terms of using less disk space. So, depending on your needs, you might choose one over the other.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/what-is-the-return-type-of-getchar-fgetc-and-getc/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

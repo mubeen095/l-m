@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Clear Screen In Python</title>
+	<atom:link href="https://www.skillvertex.com/tag/clear-screen-in-python/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 06:10:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Clear Screen In Python</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>How To Clear Screen In Python ?</title>
+		<link>https://www.skillvertex.com/blog/clear-screen-in-python/</link>
+					<comments>https://www.skillvertex.com/blog/clear-screen-in-python/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 06:10:50 +0000</pubDate>
+				<category><![CDATA[Computer Science]]></category>
+		<category><![CDATA[C++ Programming]]></category>
+		<category><![CDATA[Clear Screen In Python]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=550</guid>
+
+					<description><![CDATA[Clear Screen in Python Welcome to the world of screen cleaning in Python! Whether you&#8217;re a seasoned programmer or just starting your coding journey, knowing how to tidy up your screen can make your code more readable and organized. In this guide, we&#8217;ll explore various techniques and tricks to effectively clean your Python screen. From ... <a title="How To Clear Screen In Python ?" class="read-more" href="https://www.skillvertex.com/blog/clear-screen-in-python/" aria-label="More on How To Clear Screen In Python ?">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#clear-screen-in-python">Clear Screen in Python </a></li><li ><a href="#using-click-library">Using Click Library</a><ul><li ><a href="#code">Code </a></li><li ><a href="#output">Output </a></li></ul></li><li ><a href="#using-n-newline-character">Using \n (Newline character)</a><ul><li ><a href="#code-1">Code </a></li><li ><a href="#output-2">Output </a></li></ul></li><li ><a href="#clear-screen-program-by-using-os-system-method">Clear Screen Program by using OS.System method</a><ul><li ><a href="#code-3">Code </a></li><li ><a href="#output-4">Output </a></li></ul></li><li ><a href="#using-subprocess-library">Using Subprocess Library </a><ul><li ><a href="#input">Input</a></li><li ><a href="#output-5">Output </a></li></ul></li><li ><a href="#conclusion">Conclusion </a></li><li ><a href="#faq-how-to-clear-screen-in-python">FAQ- How To Clear Screen In Python?</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="clear-screen-in-python">Clear Screen in Python </h2>
+
+
+
+<p>Welcome to the world of screen cleaning in Python! Whether you&#8217;re a seasoned programmer or just starting your coding journey, knowing how to tidy up your screen can make your code more readable and organized. In this guide, we&#8217;ll explore various techniques and tricks to effectively clean your Python screen. From simple methods to advanced strategies, we&#8217;ll cover it all, helping you streamline your coding experience and present your work with clarity. Let&#8217;s dive in and learn how to keep your Python screen spick and span!</p>
+
+
+
+<p>Learn about screen-clearing functions in Python that work on both Windows and Linux.</p>
+
+
+
+<p>Note: If you are working on a terminal, then use commands &#8220;cls&#8221;&nbsp;and &#8220;clear&#8221;&nbsp;to clear the terminal like this . For Windows users, the&#8221; cls&#8221; command is used </p>
+
+
+
+<pre class="wp-block-code"><code>&gt;cls </code></pre>
+
+
+
+<p>Linux users </p>
+
+
+
+<ul class="wp-block-list">
+<li>Linux also has a command &#8221; clear screen&#8221; in Python easily, so use the following command to do it. </li>
+
+
+
+<li>$ clear</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="using-click-library">Using Click Library</h2>
+
+
+
+<p>Use the click library to create a function that functions on both Windows and Linux.</p>
+
+
+
+<h3 class="wp-block-heading" id="code">Code </h3>
+
+
+
+<p># Python program to clear screen using click.clear() function</p>
+
+
+
+<p></p>
+
+
+
+<p> # Import click library</p>
+
+
+
+<p> import click </p>
+
+
+
+<p>def <strong>clrscr</strong>()</p>
+
+
+
+<p>        # Clear screen using click.clear() function </p>
+
+
+
+<p>        click.clear() </p>
+
+
+
+<p>print(&#8220;Screen Cleared&#8221;) </p>
+
+
+
+<p>clrscr()</p>
+
+
+
+<h3 class="wp-block-heading" id="output">Output </h3>
+
+
+
+<pre class="wp-block-code"><code>Screen Cleared</code></pre>
+
+
+
+<h4 class="wp-block-heading">Code Explanation:</h4>
+
+
+
+<p>Here in this example, click. <kbd>clear()</kbd>&nbsp;function from&nbsp;<strong>click&nbsp;</strong>library to clear screen. This function works in<strong>&nbsp;Windows, Linux, and Mac</strong>&nbsp;operating systems.</p>
+
+
+
+<h2 class="wp-block-heading" id="using-n-newline-character">Using \n (Newline character)</h2>
+
+
+
+<p>There&#8217;s a different way to clear the screen, without running an external process. To do this, you can print several new lines (&#8220;\n&#8221;) to create a clear screen effect.</p>
+
+
+
+<h3 class="wp-block-heading" id="code-1">Code </h3>
+
+
+
+<p># Python program to clear the screen using \n</p>
+
+
+
+<p> # ‘\n’ is a newline character</p>
+
+
+
+<p> def <strong>clrscr</strong>(): </p>
+
+
+
+<p># Print ‘\n’ 10 times </p>
+
+
+
+<p>print (&#8220;\n&#8221; * 10) </p>
+
+
+
+<p>print(&#8220;Screen Cleared&#8221;)</p>
+
+
+
+<p> clrscr()</p>
+
+
+
+<h3 class="wp-block-heading" id="output-2">Output </h3>
+
+
+
+<pre class="wp-block-code"><code>Screen Cleared</code></pre>
+
+
+
+<h4 class="wp-block-heading">Code Explanation </h4>
+
+
+
+<p>In the previous example, we utilize &#8221; \n&#8221; with the print function to clear specific lines on the screen. This adds a new line character and effectively clears the desired number of lines.</p>
+
+
+
+<h2 class="wp-block-heading" id="clear-screen-program-by-using-os-system-method">Clear Screen Program by using OS.System method</h2>
+
+
+
+<p>Different operating systems like Windows, Linux, and macOS require specific commands to clear the screen. We use the &#8216;_&#8217; variable to store the last expression.</p>
+
+
+
+<p>Now, let&#8217;s explore os. system for smooth screen clearing in Python. It involves using the os. system command to execute specific actions.</p>
+
+
+
+<h3 class="wp-block-heading" id="code-3">Code </h3>
+
+
+
+<p># Python program to clear the screen using os.system </p>
+
+
+
+<p># Import os module </p>
+
+
+
+<p>import os</p>
+
+
+
+<p> def <strong>clrscr</strong>()</p>
+
+
+
+<p>: # Check if Operating System is Mac and Linux or Windows </p>
+
+
+
+<p>if os.name == &#8216;posix&#8217;:</p>
+
+
+
+<p> _ = os.system(&#8216;clear&#8217;) </p>
+
+
+
+<p>else: </p>
+
+
+
+<p>      # Else Operating System is Windows (os.name = not)</p>
+
+
+
+<p>     _ = os.system(&#8216;cls&#8217;) </p>
+
+
+
+<p>        print(&#8220;Screen Cleared&#8221;) </p>
+
+
+
+<p>clrscr()</p>
+
+
+
+<h3 class="wp-block-heading" id="output-4">Output </h3>
+
+
+
+<p>Screen Cleared</p>
+
+
+
+<p>Code Explanation: </p>
+
+
+
+<p>After applying the syntax above, the output displays &#8220;Screen Cleared.&#8221;</p>
+
+
+
+<p>In the initial example, we check the operating system using the os. name method. If it&#8217;s Linux or Mac (os.name = &#8220;posix&#8221;), we execute os. system(&#8216;clear&#8217;). Otherwise, for other systems, we use os.system(&#8216;cls&#8217;).</p>
+
+
+
+<h2 class="wp-block-heading" id="using-subprocess-library">Using Subprocess Library<br></h2>
+
+
+
+<p>In this example, we have used the&nbsp;<kbd>subprocess()</kbd>&nbsp;function to execute an action for clearing the screen in output.</p>
+
+
+
+<h3 class="wp-block-heading" id="input">Input</h3>
+
+
+
+<p># Python program to clear the screen using subprocess.call() function</p>
+
+
+
+<p> # Import subprocess library </p>
+
+
+
+<p>import subprocess </p>
+
+
+
+<p>def <strong>clrscr</strong>(): </p>
+
+
+
+<p>      cls = subprocess.call(&#8216;cls&#8217;,shell=True) </p>
+
+
+
+<p>      print(&#8220;Screen Cleared&#8221;) </p>
+
+
+
+<p>clrscr()</p>
+
+
+
+<h3 class="wp-block-heading" id="output-5">Output </h3>
+
+
+
+<pre class="wp-block-code"><code>Screen Cleared</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion </h2>
+
+
+
+<p>Numerous ways exist to clear the Python screen without errors. However, using the click library is remarkably simple and versatile. It smoothly operates on Unix, Windows, and macOS, eliminating the need for OS checks.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-how-to-clear-screen-in-python">FAQ- How To Clear Screen In Python?</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1691150220374" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How do I clear the screen in Python IDLE?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The &#8220;cls&#8221; and &#8220;clear&#8221; commands are used to clear a terminal (terminal window). If, you are using the shell within IDLE, which won&#8217;t be affected by such things. Unfortunately, there is no way to clear the screen in IDLE. The best you could do is to scroll the screen down lots of lines.</p>
+
+</div>
+</div>
+<div id="faq-question-1691150225103" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. How do you clear text in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans . Clear a Text File <strong>Using the open() Function in write Mode</strong></p>
+<p>Opening a file in write mode clears its data. Also, if the file specified doesn&#8217;t exist, Python will create a new one. The simplest way to delete a file is to use open() and assign it to a new variable in write mode.</p>
+
+</div>
+</div>
+<div id="faq-question-1691150234578" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What does cls mean in Python?<br></h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Cls is referred as class or instance.  With the cls keyword, we are able to access the members of the class.  Additionally, using self  keyword, we can get both the instance variables and the class attributes. </p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/clear-screen-in-python/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

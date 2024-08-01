@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Scope Rules In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/scope-rules-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 06:50:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Scope Rules In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Scope Rules In C</title>
+		<link>https://www.skillvertex.com/blog/scope-rules-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/scope-rules-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 06:50:47 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Scope Rules In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=1836</guid>
+
+					<description><![CDATA[Scope Rules In C Scope rules in C are like the rules that guide how and where you can use things in programming. They determine where you can work with different pieces of information, like numbers or words, in your program. Whether you&#8217;re just starting to learn programming or you&#8217;re already experienced, understanding these rules ... <a title="Scope Rules In C" class="read-more" href="https://www.skillvertex.com/blog/scope-rules-in-c/" aria-label="More on Scope Rules In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#scope-rules-in-c">Scope Rules In C</a></li><li ><a href="#what-is-the-scope-of-variable-in-c">What is the Scope Of Variable in C</a></li><li ><a href="#types-of-scope-rules-in-c">Types of Scope Rules in C</a><ul><li ><a href="#1-global-scope-in-c">1. Global Scope in C</a></li><li ><a href="#2-local-scope-in-c">2. Local Scope in C</a></li></ul></li><li ><a href="#faq-scope-rules-in-c">FAQ &#8211; Scope Rules In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="scope-rules-in-c">Scope Rules In C</h2>
+
+
+
+<p>Scope rules in C are like the rules that guide how and where you can use things in programming. They determine where you can work with different pieces of information, like numbers or words, in your program. Whether you&#8217;re just starting to learn programming or you&#8217;re already experienced, understanding these rules is crucial for writing good code in C. In this explanation, we&#8217;ll make it easier to understand how these scope rules work in C and how they affect your code. So, let&#8217;s dive into the world of C scope rules together!</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-scope-of-variable-in-c">What is the Scope Of Variable in C</h2>
+
+
+
+<p>In C programming, the scope of a variable refers to the specific part of the program where that variable is declared, defined, and used. Once we go outside this specific part, the variable becomes inaccessible, as if it doesn&#8217;t exist.</p>
+
+
+
+<p>Think of scope as the area where you can &#8220;see&#8221; and use a variable.</p>
+
+
+
+<p>In C, you can only work with a variable within its scope, and you can&#8217;t use it outside of that scope. It&#8217;s important to note that in C, all identifiers follow lexical (or static) scoping rules.</p>
+
+
+
+<p><strong>Example</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate the scope of a variable
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    // Scope of this variable is within main() function
+    // only.
+    int var = 34;
+ 
+    printf("%d", var);
+    return 0;
+}
+ 
+// function where we try to access the var defined in main()
+void func() { printf("%d", var); }</code></pre>
+
+
+
+<p><strong>Output </strong></p>
+
+
+
+<pre class="wp-block-code"><code>solution.c: In function 'func':
+solution.c:15:28: error: 'var' undeclared (first use in this function)
+ void func() { printf("%d", var); }</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="types-of-scope-rules-in-c">Types of Scope Rules in C</h2>
+
+
+
+<p>C Scope Rules are divided into 2 categories :</p>
+
+
+
+<ol class="wp-block-list">
+<li>Global Scope </li>
+
+
+
+<li>Local Scope </li>
+</ol>
+
+
+
+<h3 class="wp-block-heading" id="1-global-scope-in-c">1. Global Scope in C</h3>
+
+
+
+<p>The global scope in programming refers to the area outside of any specific block or function. Variables that are declared in this global scope are known as global variables. These global variables can be seen and used in any part of the program.</p>
+
+
+
+<p>You can also think of the global scope as the file scope because the scope of an identifier begins at the start of the file where it&#8217;s defined and continues until the end of that file.</p>
+
+
+
+<p><strong>Example</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate the global scope
+#include &lt;stdio.h&gt;
+  
+// variable declared in global scope
+int global = 5;
+  
+// global variable accessed from
+// within a function
+void display()
+{
+    printf("%d\n", global);
+}
+  
+// main function
+int main()
+{
+    printf("Before change within main: ");
+    display();
+  
+    // changing value of global
+    // variable from main function
+    printf("After change within main: ");
+    global = 10;
+    display();
+}</code></pre>
+
+
+
+<p><strong>Output </strong></p>
+
+
+
+<pre class="wp-block-code"><code>Before change within main: 5
+After change within main: 10</code></pre>
+
+
+
+<p><strong>Linkage of Variables in Global Scope</strong></p>
+
+
+
+<p>Global variables in C have external linkage by default, which means they can be accessed in another C source file. To access these global variables from another source file, you need to use the <code>extern</code> keyword to declare them. This allows you to use the global variables defined in one source file in other source files as well, promoting code modularity and reusability.</p>
+
+
+
+<p><strong>Example</strong></p>
+
+
+
+<p><strong>file1.c</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// filename: file1.c
+ 
+int a;
+ 
+int main(void)
+{
+   a = 2;
+}</code></pre>
+
+
+
+<p><strong>file2.c</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// filename: file2.c
+// When this file is linked with file1.c, functions
+// of this file can access a
+ 
+extern int a;
+ 
+int myfun()
+{
+   printf("%d", a);
+}</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>
+
+2</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="2-local-scope-in-c">2. Local Scope in C</h3>
+
+
+
+<p>The local scope in programming is the area enclosed by curly braces <code>{}</code> within a block or a function. Variables declared within this local scope are known as local variables. These local variables are only visible within the block they are declared in and any nested blocks inside that block. Local scope is also referred to as block scope because it&#8217;s tied to the specific block where the variables are declared.</p>
+
+
+
+<p>Additionally, local variables have internal linkage by default, meaning they are only accessible within the file or function where they are defined and cannot be accessed from other source files.</p>
+
+
+
+<p><strong>Example </strong></p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate the local scope
+#include &lt;stdio.h&gt;
+ 
+// Driver Code
+int main()
+{
+    {
+        int x = 10, y = 20;
+        {
+            // The outer block contains
+            // declaration of x and
+            // y, so following statement
+            // is valid and prints
+            // 10 and 20
+            printf("x = %d, y = %d\n", x, y);
+            {
+                // y is declared again,
+                // so outer block y is
+                // not accessible in this block
+                int y = 40;
+ 
+                // Changes the outer block
+                // variable x to 11
+                x++;
+ 
+                // Changes this block's
+                // variable y to 41
+                y++;
+ 
+                printf("x = %d, y = %d\n", x, y);
+            }
+ 
+            // This statement accesses
+            // only outer block's
+            // variables
+            printf("x = %d, y = %d\n", x, y);
+        }
+    }
+    return 0;
+}
+</code></pre>
+
+
+
+<p>Output </p>
+
+
+
+<pre class="wp-block-code"><code>x = 10, y = 20
+x = 11, y = 41
+x = 11, y = 20</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-scope-rules-in-c">FAQ &#8211; Scope Rules In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1694589358548" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are the 4 scopes of C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. This concept is also known as &#8220;lexical scope.&#8221; In programming, there are four main types of scope: function scope, file scope, block scope, and function prototype scope.</p>
+
+</div>
+</div>
+<div id="faq-question-1694589366845" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the scope of the storage class in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In the C language, we use storage classes to specify key attributes of a variable, such as its visibility, lifetime, initial value, and memory location. These storage classes help define how long a variable exists and where it can be accessed in a C program. </p>
+
+</div>
+</div>
+<div id="faq-question-1694589377778" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the scope of a structure in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C programming, the scope of a type defines where it can be used in the source code. When defining a structure, you have two forms: one with a name and another without. The named form allows broader use throughout the program, while the unnamed form has limited scope, typically within the same block or function.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/scope-rules-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

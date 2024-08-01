@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Jackson with JSON: Unrecognized field</title>
+	<atom:link href="https://www.skillvertex.com/tag/jackson-with-json-unrecognized-field/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:40:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Jackson with JSON: Unrecognized field</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Jackson With JSON: Unrecognized Field, Not Marked As Ignorable</title>
+		<link>https://www.skillvertex.com/blog/jackson-with-json-unrecognized-field-not-marked-as-ignorable/</link>
+					<comments>https://www.skillvertex.com/blog/jackson-with-json-unrecognized-field-not-marked-as-ignorable/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:40:37 +0000</pubDate>
+				<category><![CDATA[Question Answer]]></category>
+		<category><![CDATA[Jackson with JSON: Unrecognized field]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3215</guid>
+
+					<description><![CDATA[The error message &#8220;Unrecognized field, not marked as ignorable&#8221; typically occurs when you&#8217;re using Jackson, a popular Java library for handling JSON data. This error indicates that there is a field in your JSON data that does not correspond to a field in your Java object, and Jackson does not know how to map it. ... <a title="Jackson With JSON: Unrecognized Field, Not Marked As Ignorable" class="read-more" href="https://www.skillvertex.com/blog/jackson-with-json-unrecognized-field-not-marked-as-ignorable/" aria-label="More on Jackson With JSON: Unrecognized Field, Not Marked As Ignorable">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<p>The error message &#8220;Unrecognized field, not marked as ignorable&#8221; typically occurs when you&#8217;re using Jackson, a popular Java library for handling JSON data. This error indicates that there is a field in your JSON data that does not correspond to a field in your Java object, and Jackson does not know how to map it.</p>
+
+
+
+<p>To resolve this issue, you have a few options:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Add @JsonIgnoreProperties Annotation:</strong> You can annotate your Java class with <code>@JsonIgnoreProperties(ignoreUnknown = true)</code>. This tells Jackson to ignore any unrecognized fields in the JSON data.</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>   @JsonIgnoreProperties(ignoreUnknown = true)
+   public class YourObject {
+       // Your class fields
+   }</code></pre>
+
+
+
+<ol class="wp-block-list" start="2">
+<li><strong>Add Field Mapping:</strong> Ensure that your Java class has fields that match the fields in your JSON data. You can use annotations like <code>@JsonProperty</code> to map the JSON field names to your Java class fields.</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>   public class YourObject {
+       @JsonProperty("jsonFieldName")
+       private String javaFieldName;
+       // Other fields
+   }</code></pre>
+
+
+
+<ol class="wp-block-list" start="3">
+<li><strong>Remove Unneeded Fields:</strong> If you don&#8217;t need some of the fields in your JSON data, you can simply remove them from the JSON string before parsing it.</li>
+
+
+
+<li><strong>Use a Custom Deserializer:</strong> In more complex cases, you can create a custom deserializer to handle JSON data that doesn&#8217;t map directly to your Java class.</li>
+</ol>
+
+
+
+<p>The exact solution depends on your specific use case and how you want to handle the unrecognized fields in your JSON data.</p>
+<div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/jackson-with-json-unrecognized-field-not-marked-as-ignorable/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

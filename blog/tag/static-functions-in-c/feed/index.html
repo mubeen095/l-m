@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Static Functions In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/static-functions-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:29:09 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Static Functions In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Static Functions In C</title>
+		<link>https://www.skillvertex.com/blog/static-functions-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/static-functions-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:29:09 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Static Functions In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3038</guid>
+
+					<description><![CDATA[Static Functions In C In C, functions are indeed global by default. The &#8220;static&#8221; keyword, when applied before a function name, changes the scope of the function to be file-local. This means that the function can only be accessed within the file in which it is defined, making it inaccessible from other files or translation ... <a title="Static Functions In C" class="read-more" href="https://www.skillvertex.com/blog/static-functions-in-c/" aria-label="More on Static Functions In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#static-functions-in-c">Static Functions In C</a></li><li ><a href="#example-to-illustrate-function-fun-is-static">Example &#8211; To illustrate  function fun() is static</a></li><li ><a href="#the-following-program-is-stored-in-one-file-file-1-c">The Following Program is stored in one file file1.c</a></li><li ><a href="#a-program-stored-in-another-file-file-2-c">A program stored in another file file2.c</a></li><li ><a href="#faq-static-functions-in-c">FAQ- Static Functions In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="static-functions-in-c">Static Functions In C</h2>
+
+
+
+<p>In C, functions are indeed global by default. The &#8220;static&#8221; keyword, when applied before a function name, changes the scope of the function to be file-local. This means that the function can only be accessed within the file in which it is defined, making it inaccessible from other files or translation units. This is in contrast to global functions, which are accessible from any part of a program that includes the function&#8217;s declaration.</p>
+
+
+
+<p>So, by adding the &#8220;static&#8221; keyword to a function in C, you limit its visibility to the file it&#8217;s defined in, making it file-local. This can be useful for encapsulating functions that are intended for use within a single source file and are not meant to be exposed to other parts of the program.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-to-illustrate-function-fun-is-static">Example &#8211; To illustrate &nbsp;function&nbsp;<em>fun()&nbsp;</em>is static</h2>
+
+
+
+<pre class="wp-block-code"><code>static int fun(void) { 
+  printf("I am a static function "); 
+}</code></pre>
+
+
+
+<p>By marking functions as static in C, you limit their accessibility to the file where they are declared. This is useful for restricting access to functions that are intended to be used within a specific source file and not exposed to other parts of the program. Additionally, using the &#8220;static&#8221; keyword for functions can prevent naming conflicts and allow you to reuse the same function name in different files, as the function&#8217;s scope is confined to the file in which it&#8217;s defined. This encapsulation and scoping help in maintaining modularity and preventing unintended interactions or conflicts in larger programs.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-following-program-is-stored-in-one-file-file-1-c">The Following Program is stored in one file&nbsp;file1.c</h2>
+
+
+
+<pre class="wp-block-code"><code>
+
+/* Inside file1.c */
+static void fun1(void) {
+  puts("fun1 called"); 
+}</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="a-program-stored-in-another-file-file-2-c">A program stored in another file&nbsp;file2.c</h2>
+
+
+
+<pre class="wp-block-code"><code>/* Inside file2.c  */
+int main(void)
+{
+  fun1(); 
+  getchar();
+  return 0;  
+}</code></pre>
+
+
+
+<p>When you compile the code using the &#8220;gcc&#8221; command with both &#8220;file1.c&#8221; and &#8220;file2.c,&#8221; and if the function <code>fun1()</code> is declared as <code>static</code> in &#8220;file1.c,&#8221; you will indeed encounter an &#8220;undefined reference&#8221; error when trying to use <code>fun1()</code> in &#8220;file2.c.&#8221;</p>
+
+
+
+<p>The &#8220;static&#8221; keyword restricts the scope of the function to the file where it is defined. Therefore, functions declared as static cannot be accessed or called from other source files. In this case, since <code>fun1()</code> is declared as static in &#8220;file1.c,&#8221; it can only be used within &#8220;file1.c&#8221; and not in &#8220;file2.c.&#8221; To resolve this issue, you would need to either remove the &#8220;static&#8221; keyword from the function declaration or use a different approach, depending on your intended use of the function in multiple files.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-static-functions-in-c">FAQ- Static Functions In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1698229845316" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are static functions in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C, functions are global by default and accessible from anywhere. To limit a function&#8217;s scope to the same file where it&#8217;s defined, use the &#8220;static&#8221; keyword. This keeps the function file local, improving modularity and preventing naming conflicts in larger programs.</p>
+
+</div>
+</div>
+<div id="faq-question-1698229875605" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is a static function in structure?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Static functions and properties are part of the class or struct itself, not tied to instances. They can be called without creating an instance of the class or struct.</p>
+
+</div>
+</div>
+<div id="faq-question-1698229899496" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Are static functions good?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Static methods are efficient because the compiler can inline their code into the caller. They&#8217;re also accessible from anywhere in your code without needing to create a class instance.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/static-functions-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

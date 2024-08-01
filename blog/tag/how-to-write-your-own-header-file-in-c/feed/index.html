@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>How To Write Your Own Header File In C?</title>
+	<atom:link href="https://www.skillvertex.com/tag/how-to-write-your-own-header-file-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:47:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>How To Write Your Own Header File In C?</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>How To Write Your Own Header File In C?</title>
+		<link>https://www.skillvertex.com/blog/how-to-write-your-own-header-file-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/how-to-write-your-own-header-file-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:47:31 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[How To Write Your Own Header File In C?]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3269</guid>
+
+					<description><![CDATA[How To Write Your Own Header File In C? Creating your own header files in C is an important skill that helps you organize your code better. Header files allow you to declare functions and data structures that you can use in different parts of your program. This guide will show you how to make ... <a title="How To Write Your Own Header File In C?" class="read-more" href="https://www.skillvertex.com/blog/how-to-write-your-own-header-file-in-c/" aria-label="More on How To Write Your Own Header File In C?">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#how-to-write-your-own-header-file-in-c">How To Write Your Own Header File In C?</a></li><li ><a href="#example-to-show-how-to-create-a-header-file">Example to show how to create a header file </a><ul><li ><a href="#1-creating-my-head-h">1. Creating my head.h</a></li><li ><a href="#2-including-the-h-file-in-other-programs">2. Including the .h file in other programs</a></li><li ><a href="#3-using-the-created-header-file">3. Using the created header file </a></li></ul></li><li ><a href="#important-points">Important Points</a></li><li ><a href="#faq-how-to-write-your-own-header-file-in-c">FAQ- How To Write Your Own Header File In C?</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="how-to-write-your-own-header-file-in-c">How To Write Your Own Header File In C?</h2>
+
+
+
+<p>Creating your own header files in C is an important skill that helps you organize your code better. Header files allow you to declare functions and data structures that you can use in different parts of your program. This guide will show you how to make your own header files in C, making your code easier to manage and reuse. Whether you&#8217;re working on a small project or a big one, learning this skill will make your coding life simpler.</p>
+
+
+
+<p>Note:</p>
+
+
+
+<p>The Header files will mostly have definitions of data types, function prototypes and C preprocessor commands.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-to-show-how-to-create-a-header-file">Example to show how to create a header file </h2>
+
+
+
+<h3 class="wp-block-heading" id="1-creating-my-head-h">1. <strong>Creating my head.h</strong></h3>
+
+
+
+<p>Write the code provided below and save it as <strong>myhead.h</strong> or  enter any name along with the extension of .h which will represent a header file.</p>
+
+
+
+<pre class="wp-block-code"><code>// It is not recommended to put function definitions  
+// in a header file. Ideally there should be only 
+// function declarations. Purpose of this code is 
+// to only demonstrate working of header files. 
+void add(int a, int b) 
+{ 
+    printf("Added value=%d\n", a + b); 
+} 
+void multiply(int a, int b) 
+{ 
+    printf("Multiplied value=%d\n", a * b); 
+} </code></pre>
+
+
+
+<h3 class="wp-block-heading" id="2-including-the-h-file-in-other-programs">2. <strong>Including the .h file in other programs</strong></h3>
+
+
+
+<p>We have to add stdio.h as  #include for using the printf () function. Additionally, we have to add the header file. h as #include&#8221;my header.h&#8221;. These  &#8220;&#8221;  functions to instructs the preprocessor to monitor the present folder and you can look at the standard folder  when the header file is not found in the present folder. Make a note that only use &#8220;&#8221; angular bracket if the header file is saved in same folder.</p>
+
+
+
+<h3 class="wp-block-heading" id="3-using-the-created-header-file">3. <strong>Using the created header file </strong></h3>
+
+
+
+<pre class="wp-block-code"><code>// C program to use the above created header file 
+#include &lt;stdio.h&gt; 
+#include "myhead.h" 
+int main() 
+{ 
+    add(4, 6); 
+  
+    /*This calls add function written in myhead.h   
+      and therefore no compilation error.*/
+    multiply(5, 5); 
+  
+    // Same for the multiply function in myhead.h 
+    printf("BYE!See you Soon"); 
+    return 0; 
+} </code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Added value:10
+Multiplied value:25
+BYE!See you Soon</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="important-points">Important Points</h2>
+
+
+
+<p>Header files play a crucial role in large C programs by allowing different parts of the program to share essential information like function definitions, prototypes, global variables, and structure declarations. They help centralize these declarations, making code more organized and reusable.</p>
+
+
+
+<p>To create effective header files:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Include only the minimum required statements.</li>
+
+
+
+<li>Avoid redundant or unnecessary header files.</li>
+
+
+
+<li>Don&#8217;t place function definitions in header files; save them in separate .c files.</li>
+
+
+
+<li>Include declarations for functions and variables whose definitions are meant to be shared with the linker.</li>
+
+
+
+<li>Define data structures and enumerations that are used across multiple source files.</li>
+</ul>
+
+
+
+<p>In summary, keep header files concise and include only what&#8217;s necessary for efficient code organization and reusability.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-how-to-write-your-own-header-file-in-c">FAQ- How To Write Your Own Header File In C?</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1699264406691" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. Where can I find C header files?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. To use Metal C Runtime Library header files in z/OS® UNIX, located in <code>/usr/include/metal/</code>, ensure the Metal C compiler can find them. You can specify the directory using <code>-I</code>, set environment variables like <strong>CPATH</strong>, or adjust the compiler&#8217;s configuration. Check the compiler&#8217;s documentation for details.</p>
+
+</div>
+</div>
+<div id="faq-question-1699264414786" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What to put in header file C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A common practice in C and C++ programming is to place constants, macros, global variables, and function prototypes in header files. These header files are then included in the source files where they are needed. This approach promotes code organization, reusability, and maintainability.</p>
+
+</div>
+</div>
+<div id="faq-question-1699264422368" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the C type header file?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The <code>ctype.h</code> header file in C defines functions for character classification and transformation. These functions typically take an integer, which is the ASCII value of a character, as input. If a character is provided as input, it is internally typecasted to its integer ASCII value within the function. This header file is commonly used to check and manipulate character properties, such as checking if a character is alphanumeric, converting characters to uppercase or lowercase, and more.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/how-to-write-your-own-header-file-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

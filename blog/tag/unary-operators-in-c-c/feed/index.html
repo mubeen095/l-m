@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Unary operators in C/C++</title>
+	<atom:link href="https://www.skillvertex.com/tag/unary-operators-in-c-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 24 Jan 2024 06:59:41 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Unary operators in C/C++</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Unary Operators In C/C++</title>
+		<link>https://www.skillvertex.com/blog/unary-operators-in-c-cpp/</link>
+					<comments>https://www.skillvertex.com/blog/unary-operators-in-c-cpp/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 24 Jan 2024 06:59:41 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Unary operators in C/C++]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2097</guid>
+
+					<description><![CDATA[Unary Operators In C/C++ Unary operators in C and C++ are special tools used in programming that work with a single piece of data at a time. They help programmers change values, perform actions like counting, and make decisions based on data. In this article, we&#8217;ll take a closer look at these unary operators in ... <a title="Unary Operators In C/C++" class="read-more" href="https://www.skillvertex.com/blog/unary-operators-in-c-cpp/" aria-label="More on Unary Operators In C/C++">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#unary-operators-in-c-c">Unary Operators In C/C++</a><ul><li ><a href="#types-of-unary-operators">Types of Unary Operators</a><ul><li ><a href="#1-unary-minus">1. Unary Minus</a></li><li ><a href="#2-increment">2. Increment</a></li><li ><a href="#3-decrement">3. Decrement</a></li><li ><a href="#4-not">4. NOT ( ! )</a></li><li ><a href="#5-addressof-operator">5. Addressof operator ( &amp; )</a></li><li ><a href="#6-size-of">6. Size of()</a></li></ul></li><li ><a href="#faq-unary-operators-in-c-c">FAQ &#8211; Unary Operators In C/C++</a><ul></ul></li></ul></li></ul></nav></div>
+
+
+
+<h1 class="wp-block-heading" id="unary-operators-in-c-c">Unary Operators In C/C++</h1>
+
+
+
+<p>Unary operators in C and C++ are special tools used in programming that work with a single piece of data at a time. They help programmers change values, perform actions like counting, and make decisions based on data. In this article, we&#8217;ll take a closer look at these unary operators in C and C++, explaining what they are, what they do, and how they can be useful in programming.</p>
+
+
+
+<h2 class="wp-block-heading" id="types-of-unary-operators">Types of Unary Operators</h2>
+
+
+
+<ol class="wp-block-list">
+<li>Unary minus ( – )</li>
+
+
+
+<li>Increment ( ++ )</li>
+
+
+
+<li>Decrement ( — )</li>
+
+
+
+<li>NOT ( ! )</li>
+
+
+
+<li>Addressof operator ( &amp; )</li>
+
+
+
+<li>Sizeof()</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading" id="1-unary-minus">1. Unary Minus</h3>
+
+
+
+<p>The minus operator (-) is a simple but powerful tool in programming. It does one thing: it changes the sign of a number. If you have a positive number, it turns it into a negative number, and if you have a negative number, it makes it positive. This operator is handy for flipping the direction of values in your code when needed.</p>
+
+
+
+<pre class="wp-block-code"><code> int a = 10;
+ int b = -a;  // b = -10</code></pre>
+
+
+
+<p><strong>&nbsp;The implementation of the&nbsp;unary minus (-)&nbsp;operator:</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// C++ program to demonstrate the use of 'unary minus'
+// operator
+ 
+#include &lt;iostream&gt;
+using namespace std;
+ 
+int main()
+{
+    int positiveInteger = 100;
+    int negativeInteger = -positiveInteger;
+ 
+    cout &lt;&lt; "Positive Integer: " &lt;&lt; positiveInteger &lt;&lt; endl;
+    cout &lt;&lt; "Negative Integer: " &lt;&lt; negativeInteger &lt;&lt; endl;
+ 
+    return 0;
+}
+
+</code></pre>
+
+
+
+<p>Output </p>
+
+
+
+<pre class="wp-block-code"><code>Positive Integer: 100
+Negative Integer: -100</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="2-increment">2. Increment</h3>
+
+
+
+<p>The increment operator (++), a useful tool in programming, serves one primary purpose: to increase the value of a variable by 1. This operator provides two ways to perform the increment operation: prefix and postfix. These options offer flexibility in how you manipulate variable values in your code.</p>
+
+
+
+<p><strong>2.1 prefix increment</strong></p>
+
+
+
+<p>In the prefix method, the operator comes before the operand, like this: ++a. When you use the prefix increment operator, the value of the operand is changed before it is used in any other operations. This means that if you have a variable a with a value of 5 and you do ++a, a will become 6, and this new value will be used in any subsequent calculations or assignments.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>int a = 1;
+  int b = ++a;  // b = 2</code></pre>
+
+
+
+<p><strong>2.2 postfix increment</strong></p>
+
+
+
+<p>In the postfix method, the operator follows the operand, like this: a++. When you use the postfix increment operator, the current value of the operand is used in any ongoing operations or assignments, and then the operand&#8217;s value is increased by 1. So, if you have a variable a with a value of 5 and you do a++, a will first be used as 5 in any calculations, and then it will be incremented to 6 afterward.</p>
+
+
+
+<pre class="wp-block-code"><code>int a = 1;
+ int b = a++;   // b = 1
+ int c = a;     // c = 2</code></pre>
+
+
+
+<p><strong>&nbsp;The implementation of the&nbsp;increment ( ++ )</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// C++ Program to illustrate increment operator
+#include &lt;iostream&gt;
+using namespace std;
+ 
+int main()
+{
+ 
+    int a = 5;
+    int b = 5;
+    cout &lt;&lt; "Pre-Incrementing a = " &lt;&lt; ++a &lt;&lt; endl;
+    cout &lt;&lt; "Post-Incrementing b = " &lt;&lt; b++ &lt;&lt; endl;
+    return 0;
+}</code></pre>
+
+
+
+<p>Output </p>
+
+
+
+<pre class="wp-block-code"><code>Pre-Incrementing a = 6
+Post-Incrementing b = 5</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="3-decrement">3. Decrement</h3>
+
+
+
+<p>The decrement operator (&#8211;), a handy tool in programming, has a straightforward purpose: it decreases the value of a variable by 1. Similar to the increment operator, the decrement operation can be performed in two ways, providing flexibility in how you manipulate variable values in your code.</p>
+
+
+
+<p><strong>3.1 prefix decrement</strong></p>
+
+
+
+<p>In the prefix method, the decrement operator comes before the operand, like this: &#8211;a. When you use the prefix decrement operator</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>int a = 1;
+  int b = --a;  // b = 0</code></pre>
+
+
+
+<p><strong>3.2 postfix decrement</strong></p>
+
+
+
+<p>In the postfix method, the decrement operator follows the operand, like this: a&#8211;. When you use the postfix decrement operator, the current value of the operand is used in any ongoing operations or assignments</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>int a = 1;
+ int b = a--;   // b = 1
+ int c = a;     // c = 0</code></pre>
+
+
+
+<p><strong>&nbsp;The implementation of the&nbsp;increment ( ++ ):</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// C++ Program to illustrate decrement operator
+#include &lt;iostream&gt;
+using namespace std;
+ 
+int main()
+{
+ 
+    int a = 5;
+    int b = 5;
+    cout &lt;&lt; "Pre-Decrementing a = " &lt;&lt; --a &lt;&lt; endl;
+    cout &lt;&lt; "Post-Decrementing b = " &lt;&lt; b-- &lt;&lt; endl;
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Pre-Decrementing a = 4
+Post-Decrementing b = 5</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="4-not">4. NOT ( ! )</h3>
+
+
+
+<p>The logical NOT operator (!) is a valuable tool in programming used to flip the logical state of its operand. When you apply the logical NOT operator to a condition, it changes it from true to false, and vice versa. This operator is essential for altering the truth value of expressions, which is crucial for decision-making in programming.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>If x is true, then !x is false
+   If x is false, then !x is true</code></pre>
+
+
+
+<p><strong>&nbsp;The implementation of the&nbsp;NOT (!)&nbsp;operator</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// C++ program to demonstrate the use of '!(NOT) operator'
+ 
+#include &lt;iostream&gt;
+using namespace std;
+ 
+int main()
+{
+ 
+    int a = 10;
+    int b = 5;
+ 
+    if (!(a &gt; b))
+        cout &lt;&lt; "b is greater than a" &lt;&lt; endl;
+    else
+        cout &lt;&lt; "a is greater than b" &lt;&lt; endl;
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>a is greater than b</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="5-addressof-operator">5. Addressof operator ( &amp; )</h3>
+
+
+
+<p>The address-of-operator (&amp;) in programming is like a tool that helps us find where a variable is stored in the computer&#8217;s memory. When we use this operator, it gives us the exact memory address of a variable. These memory addresses are often called &#8220;pointers&#8221; because they act as signposts, pointing to where the variable is kept in the computer&#8217;s memory. Pointers are important because they allow us to work with variables indirectly, which is useful in various programming tasks.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>&amp; gives an address on variable n
+    int a;
+    int *ptr;
+    ptr = &amp;a; // address of a is copied to the location ptr. </code></pre>
+
+
+
+<p><strong>The implementation of the&nbsp;Address of operator(&amp;)</strong></p>
+
+
+
+<pre class="wp-block-code"><code>
+// C++ program to demonstrate the use of 'address-of(&amp;)'
+// operator
+#include &lt;iostream&gt;
+using namespace std;
+ 
+int main()
+{
+ 
+    int a = 10;
+    int* ptr = &amp;a; //&amp; will give the address of a
+    cout &lt;&lt; "Address of a = " &lt;&lt; ptr;
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output </p>
+
+
+
+<pre class="wp-block-code"><code>Address of a = 0x7ffcbffd5b24
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="6-size-of">6. Size of()</h3>
+
+
+
+<p>The size of the () operator is a handy tool in programming that tells us the size of its operand in terms of bytes. This operator always comes before the operand, which can be an expression or a cast. Essentially, it helps us figure out how much memory space a particular piece of data occupies in bytes.</p>
+
+
+
+<p><strong>The implementation of&nbsp;the size of the ()&nbsp;operator</strong></p>
+
+
+
+<pre class="wp-block-code"><code>/// C++ program to illustrate the sizeof operator
+#include &lt;iostream&gt;
+using namespace std;
+ 
+int main()
+{
+    cout &lt;&lt; "Size of double: " &lt;&lt; sizeof(double) &lt;&lt; endl;
+    cout &lt;&lt; "Size of int: " &lt;&lt; sizeof(int) &lt;&lt; endl;
+ 
+    return 0;
+}</code></pre>
+
+
+<div class="gb-container gb-container-01b92cff">
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Size of double: 8
+Size of int: 4</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-unary-operators-in-c-c">FAQ &#8211; Unary Operators In C/C++</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1695644406198" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is a unary operator in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Unary operator is <strong>operators that act upon a single operand to produce a new value</strong>. The unary operators are as follows. It operates on a pointer variable and returns an l-value equivalent to the value at the pointer address. This is called &#8220;dereferencing&#8221; the pointer</p>
+
+</div>
+</div>
+<div id="faq-question-1695644411781" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is unary and binary operators in C++?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.  Arithmetic operators in programming perform mathematical operations, like addition and subtraction. There are two types: unary (operate on one value) and binary (combine two values). They are crucial for calculations in programming.</p>
+
+</div>
+</div>
+<div id="faq-question-1695644419979" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Is unary or binary in C++?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The plus sign (+) in programming serves as both a unary and binary operator. In its unary form (+a), it enforces the evaluation of the operand as a number or a pointer. In its binary form (a + b), it performs addition between two values.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<h3 class="wp-block-heading"><br></h3>
+
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/unary-operators-in-c-cpp/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Initialization Of Static Variables In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/initialization-of-static-variables-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:28:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Initialization Of Static Variables In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Initialization Of Static Variables In C</title>
+		<link>https://www.skillvertex.com/blog/initialization-of-static-variables-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/initialization-of-static-variables-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:28:57 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Initialization Of Static Variables In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3034</guid>
+
+					<description><![CDATA[Initialization Of Static Variables In C In C, static variables must be initialized using constant literals. If you attempt to initialize a static variable with a non-constant value or an expression that cannot be determined at compile time, the program will indeed fail to compile. This is because static variables must have values that are ... <a title="Initialization Of Static Variables In C" class="read-more" href="https://www.skillvertex.com/blog/initialization-of-static-variables-in-c/" aria-label="More on Initialization Of Static Variables In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#initialization-of-static-variables-in-c">Initialization Of Static Variables In C</a></li><li ><a href="#the-program-below-fail-in-compilation">The program below Fail in Compilation</a></li><li ><a href="#changing-the-program-to-work-without-any-error">Changing the Program To Work Without Any Error</a></li><li ><a href="#faq-initialization-of-static-variables-in-c">FAQ- Initialization of static variables in C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="initialization-of-static-variables-in-c">Initialization Of Static Variables In C</h2>
+
+
+
+<p>In C, static variables must be initialized using constant literals. If you attempt to initialize a static variable with a non-constant value or an expression that cannot be determined at compile time, the program will indeed fail to compile. This is because static variables must have values that are known at compile time to ensure their memory allocation and initialization can be properly handled by the compiler. The program given below will fail in compilation.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-program-below-fail-in-compilation">The program below Fail in Compilation</h2>
+
+
+
+<pre class="wp-block-code"><code>#include&lt;stdio.h&gt; 
+int initializer(void) 
+{ 
+    return 50; 
+} 
+  
+int main() 
+{ 
+    static int i = initializer(); 
+    printf(" value of i = %d", i); 
+    getchar(); 
+    return 0; 
+} </code></pre>
+
+
+
+<h2 class="wp-block-heading" id="changing-the-program-to-work-without-any-error">Changing the Program To Work Without Any Error</h2>
+
+
+
+<pre class="wp-block-code"><code>#include&lt;stdio.h&gt; 
+int main() 
+{ 
+    static int i = 50; 
+    printf(" value of i = %d", i); 
+    getchar(); 
+    return 0; 
+} </code></pre>
+
+
+
+<p>Static variables, which have static storage duration, must be initialized before the <code>main()</code> function starts executing. Because the value of non-constant expressions may not be known at translation (compile) time, they cannot be used for the initialization of static variables. This requirement ensures that static variables have well-defined initial values that can be determined at compile time and properly set before the program&#8217;s execution begins.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-initialization-of-static-variables-in-c">FAQ- Initialization of static variables in C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1698225212512" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How is a static variable initialized?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C and C++, a static variable declared within a block is initialized only once, before the program starts. On the other hand, an auto variable with an initializer is initialized each time it&#8217;s created. Additionally, a static object of a class type will employ the default constructor if you don&#8217;t provide an explicit initialization. These rules help ensure that variables have predictable initial values and behavior in a program.</p>
+
+</div>
+</div>
+<div id="faq-question-1698225249661" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. Are static variables initialized to zero in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C and C++, static variables, like global variables, are automatically initialized to zero if you don&#8217;t provide an explicit initial value. This is a default behavior that ensures static and global variables start with a known value (zero) if you haven&#8217;t specified another value during the declaration.</p>
+
+</div>
+</div>
+<div id="faq-question-1698225258772" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. How do you initialize a static int?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In your C++ code snippet, <code>MyStruct::a</code> will be &#8220;const-initialized&#8221; because the value 67 is a compile-time constant, which is also considered a constant expression.<br />In C++, when you provide an initializer for a <code>static</code> data member that is a constant expression, it is &#8220;const-initialized,&#8221; which means it&#8217;s initialized at compile time. This is a valuable feature for ensuring that the variable&#8217;s value is known and set before the program starts running, and it allows for more predictable behavior in your code.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/initialization-of-static-variables-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

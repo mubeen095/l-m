@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Using Range In Switch Case In C/C++</title>
+	<atom:link href="https://www.skillvertex.com/tag/using-range-in-switch-case-in-c-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:08:59 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Using Range In Switch Case In C/C++</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Using Range In Switch Case In C/C++</title>
+		<link>https://www.skillvertex.com/blog/using-range-in-switch-case-in-c-c/</link>
+					<comments>https://www.skillvertex.com/blog/using-range-in-switch-case-in-c-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:08:59 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Using Range In Switch Case In C/C++]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2064</guid>
+
+					<description><![CDATA[Using Range In Switch Case In C/C++ This extension allows you to specify a range of consecutive values in a single case label, which can be quite convenient for simplifying code when you need to perform the same actions for a range of values. Syntax The syntax for using range case is: It can be ... <a title="Using Range In Switch Case In C/C++" class="read-more" href="https://www.skillvertex.com/blog/using-range-in-switch-case-in-c-c/" aria-label="More on Using Range In Switch Case In C/C++">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#using-range-in-switch-case-in-c-c">Using Range In Switch Case In C/C++</a></li><li ><a href="#syntax">Syntax </a></li><li ><a href="#complexity-analysis">Complexity Analysis</a></li><li ><a href="#error-conditions">Error conditions</a></li><li ><a href="#faq-using-range-in-switch-case-in-c-c">FAQ- Using Range In Switch Case In C/C++</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="using-range-in-switch-case-in-c-c">Using Range In Switch Case In C/C++</h2>
+
+
+
+<p>This extension allows you to specify a range of consecutive values in a single <code>case</code> label, which can be quite convenient for simplifying code when you need to perform the same actions for a range of values.</p>
+
+
+
+<h2 class="wp-block-heading" id="syntax">Syntax </h2>
+
+
+
+<p>The syntax for using range case is:</p>
+
+
+
+<pre class="wp-block-code"><code>case low ... high:
+</code></pre>
+
+
+
+<p>It can be used for a range of ASCII character codes like this:</p>
+
+
+
+<pre class="wp-block-code"><code>case 'A' ... 'Z':
+</code></pre>
+
+
+
+<p>Note:</p>
+
+
+
+<p>You have to write ellipses (&#8230;)</p>
+
+
+
+<p>Example:</p>
+
+
+
+<pre class="wp-block-code"><code>// Correct  -   case 1 ... 5:
+// Wrong -    case 1...5: </code></pre>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate
+// using range in switch case
+#include &lt;stdio.h&gt;
+int main()
+{
+    int arr&#91;] = { 1, 5, 15, 20 };
+ 
+    for (int i = 0; i &lt; 4; i++) {
+        switch (arr&#91;i]) {
+            // range 1 to 6
+        case 1 ... 6:
+            printf("%d in range 1 to 6\n", arr&#91;i]);
+            break;
+            // range 19 to 20
+        case 19 ... 20:
+            printf("%d in range 19 to 20\n", arr&#91;i]);
+            break;
+        default:
+            printf("%d not in range\n", arr&#91;i]);
+            break;
+        }
+    }
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1 in range 1 to 6
+5 in range 1 to 6
+15 not in range
+20 in range 19 to 20</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="complexity-analysis">Complexity Analysis</h2>
+
+
+
+<ol class="wp-block-list">
+<li>Time Complexity: O(n)
+<ul class="wp-block-list">
+<li>Time complexity is a measure of how the execution time of an algorithm or program scales with the input size.</li>
+
+
+
+<li>In this case, the algorithm or code snippet has a time complexity of O(n), where &#8216;n&#8217; represents the size of the array &#8216;arr.&#8217;</li>
+
+
+
+<li>This means that as the size of the input array &#8216;arr&#8217; increases, the time it takes for the algorithm or code to run will also increase linearly.</li>
+</ul>
+</li>
+
+
+
+<li>Auxiliary Space Complexity: O(1)
+<ul class="wp-block-list">
+<li>Auxiliary space complexity refers to the amount of additional memory space used by the algorithm or code, excluding the input data.</li>
+
+
+
+<li>Auxiliary space complexity of O(1) indicates that the algorithm or code uses a constant amount of extra memory space regardless of the input size.</li>
+
+
+
+<li>In other words, the amount of additional memory used does not depend on the size of the input array &#8216;arr.&#8217;</li>
+</ul>
+</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="error-conditions">Error conditions</h2>
+
+
+
+<ol class="wp-block-list">
+<li><strong>low &gt; high:&nbsp;</strong>The compiler gives an error message.</li>
+
+
+
+<li><strong>Overlapping case values:&nbsp;</strong>If the value of a case label is within a case range that has already been used in the switch statement, the compiler gives an error message.</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="faq-using-range-in-switch-case-in-c-c">FAQ- Using Range In Switch Case In C/C++</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1695375856396" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How to specify a range in the switch case in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. You can use the <code>...</code> operator to specify a range of values in a <code>case</code> label. This is particularly useful when you want to handle a range of values in a switch statement without writing separate cases for each individual value.<br />For example, if you want to handle uppercase letters &#8216;A&#8217; through &#8216;Z&#8217; in a switch statement.</p>
+
+</div>
+</div>
+<div id="faq-question-1695375875096" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. Can you use a range in a switch statement?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C and C++, you can freely intermix case ranges and case labels within a switch statement. This allows you to handle individual values as well as ranges of values in the same switch statement, providing flexibility and readability in your code.</p>
+
+</div>
+</div>
+<div id="faq-question-1695375887290" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Can we test the range 5 to 7 or 8 to 10 using a switch statement in C programming?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. You can use a range of values with a switch-case statement in C or C++ when using a compiler that supports this feature, such as the GNU C Compiler (GCC) extension. This allows you to specify a range of consecutive values in a single <code>case</code> label, which can simplify code and make it more concise.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/using-range-in-switch-case-in-c-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

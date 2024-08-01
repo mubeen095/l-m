@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Const Qualifier In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/const-qualifier-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 06:52:10 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Const Qualifier In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Const Qualifier In C</title>
+		<link>https://www.skillvertex.com/blog/const-qualifier-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/const-qualifier-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 06:52:10 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Const Qualifier In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=1870</guid>
+
+					<description><![CDATA[Const Qualifier In C In C programming, there&#8217;s something called the &#8220;const&#8221; qualifier. It&#8217;s like a rule that says once you set a value to something, you can&#8217;t change it. This is really important because it helps make sure data in a program stays reliable and doesn&#8217;t get messed up accidentally. In this discussion about ... <a title="Const Qualifier In C" class="read-more" href="https://www.skillvertex.com/blog/const-qualifier-in-c/" aria-label="More on Const Qualifier In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#const-qualifier-in-c">Const Qualifier In C</a></li><li ><a href="#what-is-a-const-qualifier">What is a Const Qualifier </a><ul><li ><a href="#1-constant-variables"> 1. Constant Variables</a></li><li ><a href="#2-pointer-to-constant">2. Pointer to Constant</a></li><li ><a href="#3-constant-pointer-to-variable">3. Constant Pointer to Variable</a></li></ul></li><li ><a href="#advantages-of-const-qualifier-in-c">Advantages of const Qualifier In C</a></li><li ><a href="#faq-const-qualifier-in-c">FAQ &#8211; Const Qualifier In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="const-qualifier-in-c">Const Qualifier In C</h2>
+
+
+
+<p>In C programming, there&#8217;s something called the &#8220;const&#8221; qualifier. It&#8217;s like a rule that says once you set a value to something, you can&#8217;t change it. This is really important because it helps make sure data in a program stays reliable and doesn&#8217;t get messed up accidentally. In this discussion about &#8220;const&#8221; in C, we&#8217;ll look at how to use it and why it&#8217;s useful for C programmers. Knowing about &#8220;const&#8221; is a big part of writing code in C that&#8217;s strong and easy to understand.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-const-qualifier">What is a Const Qualifier </h2>
+
+
+
+<p>You can use the &#8220;const&#8221; qualifier in C to declare a variable and make sure it doesn&#8217;t change its value. However, it&#8217;s important to note that, depending on where the const variable is stored, you might still be able to change its value using a pointer, but this isn&#8217;t recommended.</p>
+
+
+
+<p>Using &#8220;const&#8221; in C is a good idea when you want to make sure certain values stay the same and don&#8217;t get accidentally changed. It&#8217;s a way to keep your code reliable and prevent unexpected modifications.</p>
+
+
+
+<h3 class="wp-block-heading" id="1-constant-variables"> 1. Constant Variables</h3>
+
+
+
+<pre class="wp-block-code"><code>const int var = 100;
+</code></pre>
+
+
+
+<p>const is used to declare a variable&nbsp;<strong>var&nbsp;</strong>as a constant with an initial value of 100 in the given example. The value of this variable cannot be modified once it is initialized. Refer to the following example given :</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to demonstrate that constant variables can not
+// be modified
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    const int var = 100;
+ 
+    // Compilation error: assignment of read-only variable
+    // 'var'
+    var = 200;
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p><strong>Output </strong></p>
+
+
+
+<pre class="wp-block-code"><code>./Solution.cpp: In function 'int main()':
+./Solution.cpp:11:9: error: assignment of read-only variable 'var'
+     var = 200;
+         ^</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="2-pointer-to-constant">2. Pointer to Constant</h3>
+
+
+
+<pre class="wp-block-code"><code>const int* ptr;
+</code></pre>
+
+
+
+<p>You can modify a pointer to point to a different integer variable, but you can&#8217;t change the value of the actual object (the thing it&#8217;s pointing to) using that pointer. The pointer itself is stored in an area where you can read and write data, like the stack. Refer to the example below:</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to demonstrate that  the pointer to point to
+// any other integer variable, but the value of the object
+// (entity) pointed can not be changed
+ 
+#include &lt;stdio.h&gt;
+int main(void)
+{
+    int i = 10;
+    int j = 20;
+    /* ptr is pointer to constant */
+    const int* ptr = &amp;i;
+ 
+    printf("ptr: %d\n", *ptr);
+    /* error: object pointed cannot be modified
+    using the pointer ptr */
+    *ptr = 100;
+ 
+    ptr = &amp;j; /* valid */
+    printf("ptr: %d\n", *ptr);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p><strong>Output </strong></p>
+
+
+
+<pre class="wp-block-code"><code>./Solution.c: In function 'main':
+./Solution.c:12:10: error: assignment of read-only location '*ptr'
+     *ptr = 100;
+          ^</code></pre>
+
+
+
+<p><strong>Example 2: Program where variable i itself is constant</strong></p>
+
+
+
+<pre class="wp-block-code"><code>
+// C program to demonstrate that  the pointer to point to
+// any other integer variable, but the value of the object
+// (entity) pointed can not be changed
+ 
+#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+    /* i is stored in read only area*/
+    int const i = 10;
+    int j = 20;
+ 
+    /* pointer to integer constant. Here i
+    is of type "const int", and &amp;i is of
+    type "const int *".  And p is of type
+    "const int", types are matching no issue */
+    int const* ptr = &amp;i;
+ 
+    printf("ptr: %d\n", *ptr);
+ 
+    /* error */
+    *ptr = 100;
+ 
+    /* valid. We call it up qualification. In
+    C/C++, the type of "int *" is allowed to up
+    qualify to the type "const int *". The type of
+    &amp;j is "int *" and is implicitly up qualified by
+    the compiler to "const int *" */
+ 
+    ptr = &amp;j;
+    printf("ptr: %d\n", *ptr);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>In C++ and C, down qualification is not allowed and can lead to issues or warnings. Down qualification occurs when you assign a qualified type (e.g., const-qualified) to a non-qualified type. This means that if you have a pointer or reference to a const-qualified object and you try to assign it to a non-const pointer or reference, it will likely result in a compilation error in C++</p>
+
+
+
+<p><strong>Example 3: Program to show down qualifications</strong></p>
+
+
+
+<pre class="wp-block-code"><code>
+// C program to demonstrate the down qualification
+ 
+#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+    int i = 10;
+    int const j = 20;
+ 
+    /* ptr is pointing an integer object */
+    int* ptr = &amp;i;
+ 
+    printf("*ptr: %d\n", *ptr);
+ 
+    /* The below assignment is invalid in C++, results in
+       error In C, the compiler *may* throw a warning, but
+       casting is implicitly allowed */
+    ptr = &amp;j;
+ 
+    /* In C++, it is called 'down qualification'. The type
+       of expression &amp;j is "const int *" and the type of ptr
+       is "int *". The assignment "ptr = &amp;j" causes to
+       implicitly remove const-ness from the expression &amp;j.
+       C++ being more type restrictive, will not allow
+       implicit down qualification. However, C++ allows
+       implicit up qualification. The reason being, const
+       qualified identifiers are bound to be placed in
+       read-only memory (but not always). If C++ allows
+       above kind of assignment (ptr = &amp;j), we can use 'ptr'
+       to modify value of j which is in read-only memory.
+       The consequences are implementation dependent, the
+       program may fail
+      at runtime. So strict type checking helps clean code.
+     */
+ 
+    printf("*ptr: %d\n", *ptr);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p><strong>Output </strong></p>
+
+
+
+<pre class="wp-block-code"><code>main.c: In function ‘main’:
+main.c:16:9: warning: assignment discards ‘const’ qualifier from pointer target type &#91;-Wdiscarded-qualifiers]
+   16 |     ptr = &amp;j;
+      |         ^
+*ptr: 10
+*ptr: 20</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="3-constant-pointer-to-variable">3. Constant Pointer to Variable</h3>
+
+
+
+<pre class="wp-block-code"><code>int* const ptr;
+</code></pre>
+
+
+
+<p>The declaration you provided is for a pointer to a constant integer, not a constant pointer to an integer. In C and C++, these two declarations have different meanings<br></p>
+
+
+
+<pre class="wp-block-code"><code>
+// C program to demonstrate that value pointed by the
+// pointer can not be changed as well as we cannot point the
+// pointer to other variables
+ 
+#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+    int i = 10;
+    int j = 20;
+    /* constant pointer to constant integer */
+    const int* const ptr = &amp;i;
+ 
+    printf("ptr: %d\n", *ptr);
+ 
+    ptr = &amp;j; /* error */
+    *ptr = 100; /* error */
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>./Solution.c: In function 'main':
+./Solution.c:12:9: error: assignment of read-only variable 'ptr'
+     ptr = &amp;j; /* error */
+         ^
+./Solution.c:13:10: error: assignment of read-only location '*ptr'
+     *ptr = 100; /* error */
+          ^</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="advantages-of-const-qualifier-in-c">Advantages of const Qualifier In C</h2>
+
+
+
+<p>Using the <code>const</code> keyword in your code offers several advantages:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Improved Code Readability:</strong> When you mark a variable as <code>const</code>, you&#8217;re telling other programmers that its value shouldn&#8217;t change. This makes your code easier for others to understand and maintain.</li>
+
+
+
+<li><strong>Enhanced Type Safety:</strong> By using, you can prevent accidental modifications to values, reducing the chances of bugs and errors in your code. It adds an extra layer of protection.</li>
+
+
+
+<li><strong>Improved Optimization:</strong> Compilers can optimize <code>const</code> variables more effectively because they know these values won&#8217;t change during program execution. This optimization can result in faster and more efficient code.</li>
+
+
+
+<li><strong>Better Memory Usage:</strong> Declaring variables as <code>const</code> can often eliminate the need to create unnecessary copies of values, reducing memory usage and improving overall performance.</li>
+
+
+
+<li><strong>Improved Compatibility:</strong> Using <code>const</code> in your code can enhance compatibility with other libraries and APIs that also use <code>const</code> variables. It helps ensure that your code plays well with others.</li>
+
+
+
+<li><strong>Improved Reliability:</strong> <code>const</code> helps make your code more reliable by preventing unexpected value modifications, and reducing the risk of bugs and errors in your program.</li>
+</ol>
+
+
+
+<p>In summary, incorporating the <code>const</code> keyword in your code can lead to more readable, reliable, and optimized software while enhancing compatibility with other code and libraries.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-const-qualifier-in-c">FAQ &#8211; Const Qualifier In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1694681798997" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.  What is the const qualifier?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The const qualifier serves as a clear declaration that a data object&#8217;s value cannot be changed once it&#8217;s initialized. In other words, it&#8217;s a way of saying, &#8220;This thing won&#8217;t change after I set its value.&#8221; This means you can&#8217;t use const data objects in situations where a change is expected or required. For example, you can&#8217;t use a const data object on the left side of an assignment statement because it&#8217;s not allowed to be modified once it has a value.</p>
+
+</div>
+</div>
+<div id="faq-question-1694681807569" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. Why do we require const qualifier in C with example?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The const qualifier designates a variable as unchangeable after initialization. This is valuable for constants like PI, enhancing code readability and preventing errors.</p>
+
+</div>
+</div>
+<div id="faq-question-1694681817113" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is const and volatile qualifier in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The const keyword ensures a pointer can&#8217;t change after initialization, protecting it from modification. In contrast, the volatile keyword indicates that a value can be changed by external actions beyond the user&#8217;s control.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/const-qualifier-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
